@@ -3,8 +3,9 @@ from concurrent.futures import ThreadPoolExecutor
 from flask import Flask, jsonify, render_template, request
 import scraper as sc
 import analysis as an
+import gunicorn
 
-app = Flask(__name__)
+gunicorn app:app
 CACHE, TTL = {}, 600
 
 
