@@ -67,6 +67,10 @@ def analyze():
     CACHE[q] = (time.time(), out)
     return jsonify(out)
 
+import os
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Railway automatically injects a PORT variable; fall back to 5000 for local testing
+    port = int(os.environ.get("PORT", 5000))
+    # Host must be 0.0.0.0 to accept external traffic in a container
+    app.run(host="0.0.0.0", port=port)
