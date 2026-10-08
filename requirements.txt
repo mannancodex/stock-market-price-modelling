@@ -1,0 +1,12 @@
+flask
+requests
+beautifulsoup4
+pypdf
+numpy
+pandas
+scikit-learn
+torch
+transformers
+trafilatura
+googlenewsdecoder
+vaderSentiment
